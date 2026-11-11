@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Schedule · Fox Sports Performance</title>
+  <meta name="description" content="Live training calendar for Fox Sports Performance in Bend, Oregon. Pick a date and book a session." />
+  <meta name="theme-color" content="#051621" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=IBM+Plex+Mono:wght@500&family=Lora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-dark">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="/" class="logo" aria-label="Fox Sports Performance home">
+        <img class="logo-img" src="assets/fox-logo.png" alt="Fox Sports Performance" onerror="this.remove()" />
+        <span class="logo-text">FOX<span>SPORTS PERFORMANCE</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#training">Training</a>
+        <a href="/#weekly">Weekly schedule</a>
+        <a href="/#passes">Passes</a>
+        <a href="/" class="btn btn-ghost btn-sm">← Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="schedule-page">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow-accent">Live schedule</span> Bend, Oregon</p>
+      <h1 class="page-title">Book your <span class="ul">next session</span>.</h1>
+      <p class="section-lede on-dark">Pick a date to see open sessions. Booking and payment are handled securely by STYL.</p>
+
+      <div class="embed-frame">
+        <!-- STYL: Fox Sports Performance calendar -->
+        <div data-ls-embed data-ls-type="calendar" data-ls-slug="fox-sports-performance" data-ls-theme="dark" data-ls-transparent="1" data-ls-max-height="none"></div>
+        <script async src="https://styl.inc/embed.js"></script>
+      </div>
+      <p class="embed-note">Trouble loading the calendar? <a href="https://styl.inc/brand/fox-sports-performance" target="_blank" rel="noopener">Open it on STYL</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap copyright">© <span id="year">2026</span> Fox Sports Performance · Bookings powered by STYL</div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
