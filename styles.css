@@ -244,3 +244,13 @@ h3 { font-size: 20px; line-height: 1.3; }
 }
 .page-dark .site-footer { padding: 0 0 32px; }
 .page-dark .copyright { margin-top: 0; }
+
+/* 1-on-1 availability */
+.lede-gap { margin-top: 20px; }
+.week-3 li { grid-template-columns: 160px 220px 1fr; }
+.btn-outline { border: 1px solid var(--brand-deep); color: var(--brand-deep); background: transparent; }
+.btn-outline:hover { background: var(--brand-deep); color: var(--primary-foreground); }
+@media (max-width: 900px) {
+  .week-3 li { grid-template-columns: 130px 1fr; }
+  .week-3 .where { grid-column: 2; }
+}
