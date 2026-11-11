@@ -6,7 +6,8 @@ Static marketing site for Fox Sports Performance personal training, styled to ma
 - `index.html` — homepage; the hero links to the schedule via a calendar screenshot
 - `schedule.html` — live STYL calendar embed
 - `assets/calendar-preview.jpg` — calendar screenshot used on the homepage
-- `assets/fox-logo.png` — header logo (if missing, the text name is shown instead)
+- `assets/fox-logo.png` — original logo file
+- `assets/fox-logo-web.png` — trimmed, compressed copy used in the header (if missing, the text name is shown instead)
 - `styles.css` — design tokens (colors, fonts) taken from styl.inc
 - `netlify.toml` — Netlify config (no build step; publishes the repo root)
 
