@@ -254,3 +254,18 @@ h3 { font-size: 20px; line-height: 1.3; }
   .week-3 li { grid-template-columns: 130px 1fr; }
   .week-3 .where { grid-column: 2; }
 }
+
+/* Day lists on phones: day + session on one line, details below */
+@media (max-width: 640px) {
+  .week li, .week-3 li {
+    grid-template-columns: 1fr auto;
+    column-gap: 12px; row-gap: 4px;
+    padding: 16px 0;
+  }
+  .week .day { font-size: 19px; grid-column: 1; }
+  .week .time { grid-column: 2; justify-self: end; font-size: 13px; }
+  .week .what { grid-column: 1 / -1; font-size: 15px; }
+  .week .where { grid-column: 1 / -1; font-size: 14px; }
+  .week-3 .what { grid-column: 2; grid-row: 1; justify-self: end; text-align: right; }
+  .week-3 .where { grid-column: 1 / -1; }
+}
