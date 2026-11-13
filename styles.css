@@ -275,3 +275,12 @@ h3 { font-size: 20px; line-height: 1.3; }
 .price-line { display: flex; align-items: baseline; gap: 10px; margin-top: 24px; color: var(--dark-muted); font-size: 15px; }
 .price { font-family: var(--font-serif); font-size: 40px; font-weight: 600; color: var(--brand-bright); line-height: 1; }
 .slots .what { font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; color: var(--brand-deep); }
+
+/* Navigation: current page + phone menu */
+.nav a[aria-current="page"] { color: #fff; }
+@media (max-width: 640px) {
+  .nav { gap: 18px; }
+  .nav a.nav-key { display: inline; font-size: 15px; }
+  .nav a.btn-primary.btn-sm, .nav a.btn-ghost.btn-sm { display: none; }
+  .nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--brand-bright); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+}
