@@ -6,7 +6,7 @@ Static marketing site for Fox Sports Performance personal training, styled to ma
 - `index.html` — homepage; the hero links to the schedule via a calendar screenshot
 - `schedule.html` — full STYL calendar (all sessions)
 - `group-training.html` — group workshops landing page; STYL calendar filtered to the `group-training` tag
-- `one-on-one.html` — 1-on-1 training landing page; STYL calendar filtered to the `one-on-one` tag
+- `private-training.html` — Private Training landing page; STYL calendar filtered to the `one-on-one` tag (old `/one-on-one` address redirects here)
 - `assets/calendar-preview.jpg` — calendar screenshot used on the homepage
 - `assets/fox-logo-light.png` — white-and-grey logo for dark backgrounds, used in the header on every page (if missing, the text name is shown instead)
 - `assets/fox-logo-wide.png` — wide full-colour logo for light backgrounds (not currently used on the site)
