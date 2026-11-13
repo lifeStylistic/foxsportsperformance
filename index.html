@@ -30,8 +30,11 @@
 
   <main id="main">
     <!-- HERO: tagline + calendar preview -->
-    <section class="hero" id="top">
-      <div class="wrap hero-grid">
+    <section class="hero hero-video" id="top">
+      <video class="hero-bg" muted loop playsinline preload="none" poster="assets/hero-poster.jpg" aria-hidden="true"
+             data-src-desktop="assets/hero-montage.mp4" data-src-mobile="assets/hero-montage-mobile.mp4"></video>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="wrap">
         <div class="hero-copy">
           <p class="eyebrow"><span class="eyebrow-accent">Bend, Oregon</span> Strength · Speed · Confidence</p>
           <h1>Build <span class="ul">strength</span>.<br />Develop <span class="ul">speed</span>.<br />Play with confidence.</h1>
@@ -41,11 +44,6 @@
             <a href="private-training.html" class="btn btn-primary">Book Private Training</a>
           </div>
         </div>
-
-        <a href="group-training.html" class="cal-preview" aria-label="Open the group training calendar">
-          <img src="assets/calendar-preview.jpg" width="1200" height="1068" alt="Fox Sports Performance training calendar showing weekly speed and gym sessions" />
-          <span class="cal-preview-cta">Open Group Training calendar <span aria-hidden="true">→</span></span>
-        </a>
       </div>
     </section>
 
@@ -169,6 +167,18 @@
     <div class="wrap copyright">© <span id="year">2026</span> Fox Sports Performance · Bookings powered by STYL</div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Hero video: smaller file on phones; still image only when reduced motion is requested
+    (function () {
+      var v = document.querySelector('.hero-bg');
+      if (!v) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      v.src = window.innerWidth <= 700 ? v.dataset.srcMobile : v.dataset.srcDesktop;
+      v.muted = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    })();
+  </script>
 </body>
 </html>
